@@ -1,6 +1,7 @@
-const {CharUp} = require('./task 2');
-const {Fib} = require('./task 3');
-const {Unique} = require('./task 4');
+const {CharUp} = require('./Task 2');
+const {Fib} = require('./Task 3');
+const {Unique} = require('./Task 4');
+const {Merge} = require('./Task 6');
 
 // Task 1
 let bio = ['im', 'smallgerman', 'or', 'apcikk', 'but', 'call', 'me', 'boss', 'of', 'the', 'gym'];
@@ -14,3 +15,6 @@ Fib();
 
 // Task 4
 Unique();
+
+// Task 6
+Merge();
