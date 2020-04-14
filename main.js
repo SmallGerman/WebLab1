@@ -12,6 +12,10 @@ console.log(CharUp('the war in thailand characterises hell'));
 
 // Task 3
 console.log(Fib(1));
+console.log(Fib(2));
+console.log(Fib(3));
+console.log(Fib(4));
+console.log(Fib(5));
 
 // Task 4
 let arr = ['lol', 'kek', 'lmao', 'kek', 'kek', 'kekw', 'lol'];

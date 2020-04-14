@@ -5,5 +5,5 @@ exports.Fib = function fibNum(n) {
         next = prev + next;
         prev = next - prev;
     }
-    return n;
+    return prev;
 };
