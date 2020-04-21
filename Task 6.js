@@ -1,14 +1,29 @@
-exports.MergeSort = function mergeSort(arr1, arr2) {
-    let list = [];
-    while (arr1.length && arr2.length){
-        if (arr1[0] < arr2[0]){
-            list.push(arr1.shift())
-        }else {
-            list.push(arr2.shift())
-        }
+function merge (arrFirst, arrSecond) {
+    const arrSort = [];
+    let i = 0,
+        j = 0;
+    while (i < arrFirst.length && j < arrSecond.length) {
+        arrSort.push(
+            (arrFirst[i] < arrSecond[j]) ?
+                arrFirst[i++] : arrSecond[j++]
+        );
     }
-    if (arr1.length){
-        return list.concat(arr1);
+    return [
+        ...arrSort,
+        ...arrFirst.slice(i),
+        ...arrSecond.slice(j)
+    ];
+}
+
+exports.Split = function mergeSort(arr) {
+    if (!arr || !arr.length) {
+        return null;
     }
-    return list.concat(arr2);
+    if (arr.length <= 1) {
+        return arr;
+    }
+    const middle = Math.floor(arr.length / 2);
+    const arrLeft = arr.slice(0, middle);
+    const arrRight = arr.slice(middle);
+    return merge(mergeSort(arrLeft), mergeSort(arrRight));
 };
